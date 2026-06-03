@@ -1,0 +1,99 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f4f7fb;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* Counter Card */
+.counter {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.counter h1 {
+  color: #2563eb;
+  margin-bottom: 15px;
+}
+
+.counter h2 {
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* Buttons */
+.counter button {
+  border: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.counter button:first-of-type {
+  background: #22c55e;
+  color: white;
+}
+
+.counter button:first-of-type:hover {
+  background: #16a34a;
+  transform: translateY(-2px);
+}
+
+.counter button:last-of-type {
+  background: #ef4444;
+  color: white;
+}
+
+.counter button:last-of-type:hover {
+  background: #dc2626;
+  transform: translateY(-2px);
+}
+
+/* User Table Section */
+.user-table {
+  background: white;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.user-table h1 {
+  margin-bottom: 20px;
+  color: #2563eb;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .counter,
+  .user-table {
+    padding: 20px;
+  }
+
+  .counter button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}

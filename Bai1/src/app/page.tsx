@@ -1,15 +1,27 @@
-"use client"
-import { useState } from "react";
+import Counter from "@/components/Counter/Counter";
+import "./global.css";
+import UserTable from "@/components/UserTable/UserTable";
 
-const HomePage = () => {
-  const [count,setCount] = useState<number>(0);
-  return (
-    <>
-      <h1>hello world</h1>
-      <h2>count = {count}</h2>
-      <button style={{marginRight:10}} onClick={() => setCount(count + 1)}>Increase</button>
-      <button onClick={() => setCount(count - 1)}>Decrease</button>
-    </>
-  );
+interface User {
+    id: number;
+    name: string;
+    email: string;
+}
+
+const HomePage = async () => {
+    const res = await fetch("http://localhost:8000/users");
+    const data: User[] = await res.json();
+
+    return (
+        <>
+            <div className="container">
+                <Counter />
+                <div className="user-table">
+                    <h1>User Table</h1>
+                    <UserTable users={data}/>
+                </div>
+            </div>
+        </>
+    );
 }
 export default HomePage;
