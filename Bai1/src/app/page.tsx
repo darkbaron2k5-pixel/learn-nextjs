@@ -11,7 +11,7 @@ interface User {
 const HomePage = async () => {
     const res = await fetch("http://localhost:8000/users",{
         cache: "force-cache",
-        next: {revalidate: 5}
+        next: {tags: ["user"]}
     });
     const data: User[] = await res.json();
     return (
